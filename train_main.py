@@ -35,7 +35,7 @@ parser.add_argument('-se', '--start_ep' , type=int, default=0 , metavar='', help
 parser.add_argument('-ee', '--end_ep'   , type=int, default=200, metavar='', help='end epoch for training')
 parser.add_argument('-ch', '--channels' , type=int, default=64 , metavar='', help='num channels for UNet')
 parser.add_argument('-sc', '--scan_type', type=str, default='FSE' , help='takes only SE, or FSE, to distinuguish bw correct and incorrect simulation method')
-parser.add_argument('-df','--data_file', type=str, default='repo_text_files_10', metavar='', help = 'Data on which the model need to be trained')
+parser.add_argument('-df','--data_file', type=str, default='repo_t2sh_text', metavar='', help = 'Data on which the model need to be trained')
 
 if __name__ == '__main__':
     args = parser.parse_args()

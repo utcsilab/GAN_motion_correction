@@ -22,8 +22,8 @@ class MotionCorrupt_SE(Dataset):
         datafile = self.datafiles[idx]
         os.chdir('/home/sidharth/sid_notebooks/')#change current working directory
         loaded_data = torch.load(datafile)
-        local_X = np.asarray(loaded_data['SE_img'])
-        local_y = np.asarray(loaded_data['GT_img'])
+        local_X = np.asarray(loaded_data['no_physics_imgs'])
+        local_y = np.asarray(loaded_data['GT_imgs'])
         scale2 = np.max(abs(local_y))
         scale1 = np.max(abs(local_X))
 
@@ -52,8 +52,8 @@ class MotionCorrupt_FSE(Dataset):
         datafile = self.datafiles[idx]
         os.chdir('/home/sidharth/sid_notebooks/')#change current working directory
         loaded_data = torch.load(datafile)
-        local_X = np.asarray(loaded_data['FSE_img'])
-        local_y = np.asarray(loaded_data['GT_img'])
+        local_X = np.asarray(loaded_data['physics_imgs'])
+        local_y = np.asarray(loaded_data['GT_imgs'])
         scale2 = np.max(abs(local_y))
         scale1 = np.max(abs(local_X))
 

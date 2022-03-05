@@ -10,11 +10,25 @@
 # echo "All done"
 
 
-export data_file='repo_text_files'
+export data_file='t2sh_text_feb28'
 
-python train_main.py -e 10 -ma GAN -G 0 -de 20 -ge 5 -B 20 -lb 1 -lb_b 0.1 -sc SE -df ${data_file}
-python train_main.py -e 10 -ma GAN -G 0 -de 20 -ge 5 -B 20 -lb 0.1 -lb_b 0.1 -sc SE -df ${data_file}
-# python train_main.py -e 20 -ma GAN -G 1 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.1 -sc SE -df ${data_file}
+
+python train_main.py -e 10 -ma GAN -G 3 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.1 -sc FSE -df ${data_file}
+python train_main.py -e 10 -ma GAN -G 4 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.1 -sc SE -df ${data_file}
+
+
+python train_main.py -e 10 -ma GAN -G 0 -de 20 -ge 10 -B 20 -lb 1 -lb_b 1 -sc FSE -df ${data_file}
+python train_main.py -e 10 -ma GAN -G 3 -de 20 -ge 10 -B 20 -lb 1 -lb_b 1 -sc SE -df ${data_file}
+
+
+
+# python train_main.py -e 20 -ma GAN -G 1 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.1 -sc FSE -df ${data_file}
+# python train_main.py -e 20 -ma GAN -G 1 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 1 -sc FSE -df ${data_file}
+
+# python train_main.py -e 10 -ma GAN -G 2 -de 20 -ge 5 -B 20 -lb 1 -lb_b 0.1 -sc SE -df ${data_file}
+# python train_main.py -e 10 -ma GAN -G 2 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 0.1 -sc FSE -df ${data_file}
+# python train_main.py -e 10 -ma GAN -G 2 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 0.1 -sc FSE -df ${data_file}
+# python train_main.py -e 20 -ma GAN -G 2 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.1 -sc SE -df ${data_file}
 # python train_main.py -e 20 -ma GAN -G 2 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 1 -sc SE -df ${data_file}
 
 # python train_main.py -e 10 -ma GAN -G 0 -de 20 -ge 10 -B 20 -lb 1 -lb_b 1 -sc FSE -df ${data_file}
@@ -22,6 +36,6 @@ python train_main.py -e 10 -ma GAN -G 0 -de 20 -ge 5 -B 20 -lb 0.1 -lb_b 0.1 -sc
 # python train_main.py -e 10 -ma GAN -G 0 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.5 -sc FSE -df ${data_file}
 # python train_main.py -e 10 -ma GAN -G 0 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 0.1 -sc FSE -df ${data_file}
 
-# python train_main.py -e 20 -ma GAN -G 0 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 1 -sc FSE -df ${data_file}
-# python train_main.py -e 20 -ma GAN -G 0 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.1 -sc FSE -df ${data_file}
+# python train_main.py -e 20 -ma GAN -G 1 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 1 -sc FSE -df ${data_file}
+# python train_main.py -e 20 -ma GAN -G 2 -de 20 -ge 10 -B 20 -lb 1 -lb_b 0.1 -sc FSE -df ${data_file}
 # python train_main.py -e 20 -ma GAN -G 0 -de 20 -ge 10 -B 20 -lb 0.1 -lb_b 1 -sc SE -df ${data_file}
