@@ -1,12 +1,11 @@
 # MRI Motion Correction
-This repository hosts code for implementing motion correction deep learning project for the adv. topics in comp vision (deep learning) class.
+This repository is for the GAN based motion correction method for the MRI images. 
 
 ## Table of contents
 * [Requirements](#Requirements)
 * [Simulating_Motion](#Simulating_Motion)
 * [U-Net](#U-Net)
 * [GAN](#GAN)
-* [Diffusion](#GAN)
 
 ## Requirements
 Download all the required packages in a new conda enviornment. 
@@ -45,13 +44,3 @@ Further, if you just want to visualize some of the test set images in a loop, yo
 ```
 python visualizer.py
 ```
-## Diffusion
-*Please note that most of the Diffusion repo posted here was from [1]. We adapted the dataloader to correctly take our data and altered the training function to save the relevant outputs.*
-
-First you must download the saved diffusion model from our google drive (https://drive.google.com/drive/folders/16PskzHb4IJYeXGBnryjGSESgDx9dGfkE?usp=sharing). Place the folder *ncsv2-mri-mvue* inside the *Diffusion_Model* folder to maintain the assumed file structure.
-
-To run the Diffusion model at inference time please alter the validation data file path in *aux_motion_data.py* for your specific machine. If you have generated your own motion corrupt data using *motion_gen.py* then the file path should be the same that you used to generate the images. Then use the following command:
-```
-$ python motion_inference.py --gpu 2 --anatomy brain --batch_size 1 --normalize_grad 1 --batches 0 9 --extra_accel 1 --noise_boost 1 --dc_boost 0.1 --contrast NA --val_num 0
-```
-[1] Ajil   Jalal,   Marius   Arvinte,   Giannis   Daras,   Eric   Price,Alexandros G Dimakis, and Jonathan I Tamir.  Robust compressed sensing mri with deep generative priors. Advances in Neural Information Processing Systems, 2021
