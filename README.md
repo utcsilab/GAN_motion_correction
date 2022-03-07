@@ -4,7 +4,6 @@ This repository is for the GAN based motion correction method for the MRI images
 ## Table of contents
 * [Requirements](#Requirements)
 * [Simulating_Motion](#Simulating_Motion)
-* [U-Net](#U-Net)
 * [GAN](#GAN)
 
 ## Requirements
