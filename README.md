@@ -14,31 +14,24 @@ $ pip install -r requirements.txt
 ```
 You should have a GPU of sufficient memory if you want to run the training/evaluation in batches, for lower memory GPUs run using a batch size of 1. 
 
-To run inference on the pre-trained methods download a subet of the validation dataset at: https://drive.google.com/drive/folders/16PskzHb4IJYeXGBnryjGSESgDx9dGfkE?usp=sharing. 
+To run inference on the pre-trained methods download a subet of the validation dataset at: (need to update link for dataset)
 
 Make sure to change the file paths in all the relevent locations in the code to ensure the correct location of data on your machine. 
 
 ## Simulating_Motion
-To start from the fast_mri dataset, first download the dataset from the original fast_mri dataset (<https://fastmri.med.nyu.edu/>). Beware the dataset is quite large around ~2TB as it contains the raw kspace data for multiple coil acquisition. To generate the MVUE single coil images, run the following script:
+To start the motion corruption of base images, first need to download data from the this link (). Then generate the data as per the given python script:
 ```
-python fastmri_convertor.py
-```
-Remember to change the location of fast_mri dataset on your machine. 
-To generate the motion corrupt images run the following script with the correct input and output file paths on your machine:
-```
-$ python motion_gen.py
+python motion_gen.py
 ```
 
-## U-Net
-If you want to train either UNET or GAN from scratch, run the following bash script with selection of appropriate hyper-parameters:
+## GAN
+If you want to train either GAN from scratch, run the following bash script with selection of appropriate hyper-parameters:
 ```
 bash bash_training_jobs.sh
 ```
 This will run the training for different hyper-parameters and chooose the ones which give the best performance. 
-If you just want to do inference, then download the pre-trained U-Net model parameters from the following drive (<https://drive.google.com/drive/folders/1W5BYIJeQLlEkPHhLCQmOJYlm2LWSN1Ie?usp=sharing>).
-## GAN
-To do GAN training from scratch, use the same script as was provided for U-Net, just change the appropriate flags. 
-If you just want to do inference, then download the pre-trained GAN model parameters from the following drive (<https://drive.google.com/drive/folders/1QO2i3CF5iduM4COoxQZykhbDOBYkUIMv?usp=sharing>).
+
+If you just want to do inference, then download the pre-trained GAN model parameters from the following drive (Update link).
 
 Further, if you just want to visualize some of the test set images in a loop, you can use the following command with updated file structure:
 ```
